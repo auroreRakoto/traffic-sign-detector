@@ -23,34 +23,57 @@ The goal is to:
 
 ---
 
-## ⚙️ Installation
-
-### 1. Clone the repository
+## ⚙️ Installation Guide (Windows / Linux / macOS)
+### 0. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/GTSRB.Keras3.git
 cd GTSRB.Keras3
 ```
 
-### 2. (Optional) Create a virtual environment
-bash
-Copier
-Modifier
+### ✅ 1. Install a Compatible Python Version
+
+TensorFlow currently supports **Python 3.8 to 3.11**.  
+You can download Python 3.10 here:  
+👉 https://www.python.org/downloads/release/python-3109/
+
+> ⚠️ Make sure to check **“Add Python to PATH”** during installation.
+
+---
+
+### ⬆️ 2. Upgrade `pip`
+
+After installing Python, open a terminal or command prompt:
+
+```
+python -m pip install --upgrade pip
+```
+
+### 🧱 3. Create and Activate a Virtual Environment
+From the root folder of the project (where this README is):
+
+On Windows (cmd or PowerShell):
+```
 python -m venv env
-source env/bin/activate      # On Linux/macOS
-env\Scripts\activate.bat     # On Windows
+.\env\Scripts\activate
+```
 
-### 3. Install dependencies
-bash
-Copier
-Modifier
+On macOS/Linux/Git bash:
+```
+python3 -m venv env
+source env/bin/activate
+```
+
+### 📦 4. Install Required Dependencies
+```
 pip install -r requirements.txt
-If requirements.txt is missing, install manually:
+pip install tensorflow keras numpy matplotlib jupyter ipykernel
+```
 
-bash
-Copier
-Modifier
-pip install tensorflow keras numpy matplotlib
+### 🔁 5. Register the Virtual Environment as a Jupyter Kernel
+```
+python -m ipykernel install --user --name=traffic-sign-env --display-name "Python (traffic-sign)"
+```
 
 ## 🚀 How to Use
 Launch Jupyter Notebook:
