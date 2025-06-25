@@ -7,3 +7,4 @@ notebook>=6.5
 ipykernel>=6.15
 scikit-image>=0.19
 fidle
+torch
